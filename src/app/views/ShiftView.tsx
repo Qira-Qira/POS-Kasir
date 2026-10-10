@@ -91,7 +91,7 @@ export function ShiftView({
                   step="100"
                   value={startingCashInput === "0" ? "" : startingCashInput}
                   onChange={(event) => setStartingCashInput(event.target.value)}
-                  placeholder="500000"
+                  placeholder="0"
                   className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
                 />
               </div>
@@ -141,7 +141,7 @@ export function ShiftView({
                     step="100"
                     value={cashInInput === "0" ? "" : cashInInput}
                     onChange={(event) => setCashInInput(event.target.value)}
-                    placeholder="50000"
+                    placeholder="0"
                     className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
                   />
                 </div>
@@ -158,7 +158,7 @@ export function ShiftView({
                     step="100"
                     value={pettyCashOutInput === "0" ? "" : pettyCashOutInput}
                     onChange={(event) => setPettyCashOutInput(event.target.value)}
-                    placeholder="25000"
+                    placeholder="0"
                     className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
                   />
                 </div>
@@ -176,7 +176,7 @@ export function ShiftView({
                   step="100"
                   value={actualCashInput === "0" ? "" : actualCashInput}
                   onChange={(event) => setActualCashInput(event.target.value)}
-                  placeholder="500000"
+                  placeholder="0"
                   className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
                 />
               </div>
