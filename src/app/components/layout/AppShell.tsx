@@ -42,12 +42,13 @@ export function AppShell({
         <aside className={`hidden w-[220px] flex-col justify-between border-r p-3 xl:flex ${appSidebarClass}`}>
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3 rounded-2xl bg-[#fffaf5] px-3 py-3 shadow-[0_10px_20px_rgba(74,49,36,0.05)]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#7c4a2d] text-lg font-bold text-[#fffaf5] shadow-[0_12px_20px_rgba(124,74,45,0.18)]">
-                {auth?.role === "admin" ? "A" : auth?.role === "investor" ? "I" : "K"}
-              </div>
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8d6d5a]">Role</p>
-                <p className="text-base font-semibold text-[#2b1d18]">{currentRoleLabel}</p>
+             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#7c4a2d] text-lg font-bold text-[#fffaf5] shadow-[0_12px_20px_rgba(124,74,45,0.18)]">
+            G
+          </div>
+              <div className="min-w-0">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8d6d5a]">Cafe</p>
+                <p className="truncate text-sm font-semibold text-[#2b1d18]">Gumbira Loka</p>
+                <p className="text-[10px] font-medium text-[#8d6d5a]">{currentRoleLabel}</p>
               </div>
             </div>
 

@@ -34,14 +34,14 @@ export function LoginScreen({
       >
         <div className="flex items-center justify-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#7c4a2d] text-lg font-bold text-[#fffaf5] shadow-[0_12px_20px_rgba(124,74,45,0.18)]">
-            P
+            G
           </div>
           <div>
             <p className={`text-[10px] font-semibold uppercase tracking-[0.22em] ${isDarkMode ? "text-[#d9cab6]" : "text-[#8d6d5a]"}`}>
-              System
+              Cafe
             </p>
-            <h1 className={`mt-1 text-2xl font-semibold ${isDarkMode ? "text-[#f3f4f6]" : "text-[#2b1d18]"}`}>
-              POSLite
+            <h1 className={`mt-1 text-xl font-semibold ${isDarkMode ? "text-[#f3f4f6]" : "text-[#2b1d18]"}`}>
+              Gumbira Loka
             </h1>
           </div>
         </div>

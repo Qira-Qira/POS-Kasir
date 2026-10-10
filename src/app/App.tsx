@@ -25,6 +25,9 @@ import { StockView } from "./views/StockView";
 import { TransactionHistoryView } from "./views/TransactionHistoryView";
 import { useEffect, useState } from "react";
 
+const STORE_NAME = "Gumbira Loka Cafe";
+const STORE_ADDRESS = "Masuk Gumbira Park / Kampus C UISI, Jl. Siti Fatimah Binti Maimun, Jarangkuwung, Tlogopojok, Kec. Gresik, Kabupaten Gresik, Jawa Timur 61121";
+
 export default function App() {
   const appState = usePosApp();
   const {
@@ -504,6 +507,8 @@ export default function App() {
                 orderType={currentTransaction.orderType}
                 transactionId={currentTransaction.id}
                 onNewTransaction={handleNewTransaction}
+                storeName={STORE_NAME}
+                storeAddress={STORE_ADDRESS}
               />
             )}
           </>
