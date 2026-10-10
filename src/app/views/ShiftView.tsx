@@ -89,7 +89,7 @@ export function ShiftView({
                   type="number"
                   min="0"
                   step="100"
-                  value={startingCashInput}
+                  value={startingCashInput === "0" ? "" : startingCashInput}
                   onChange={(event) => setStartingCashInput(event.target.value)}
                   placeholder="500000"
                   className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
@@ -139,7 +139,7 @@ export function ShiftView({
                     type="number"
                     min="0"
                     step="100"
-                    value={cashInInput}
+                    value={cashInInput === "0" ? "" : cashInInput}
                     onChange={(event) => setCashInInput(event.target.value)}
                     placeholder="50000"
                     className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
@@ -156,7 +156,7 @@ export function ShiftView({
                     type="number"
                     min="0"
                     step="100"
-                    value={pettyCashOutInput}
+                    value={pettyCashOutInput === "0" ? "" : pettyCashOutInput}
                     onChange={(event) => setPettyCashOutInput(event.target.value)}
                     placeholder="25000"
                     className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
@@ -174,7 +174,7 @@ export function ShiftView({
                   type="number"
                   min="0"
                   step="100"
-                  value={actualCashInput}
+                  value={actualCashInput === "0" ? "" : actualCashInput}
                   onChange={(event) => setActualCashInput(event.target.value)}
                   placeholder="500000"
                   className="h-11 rounded-2xl border-[#ebdcc7] bg-[#f9f2ea] pl-10 text-[#2b1d18] placeholder:text-[#9a8479]"
@@ -198,7 +198,7 @@ export function ShiftView({
             <div>
               <label className="mb-2 block text-sm font-medium text-[#4d382f]">Catatan penutupan shift</label>
               <textarea
-                value={closingNote}
+                value={closingNote === "" ? "" : closingNote}
                 onChange={(event) => setClosingNote(event.target.value)}
                 rows={3}
                 placeholder="Catatan audit: ada pengeluaran tambahan, cashback, atau selisih yang perlu dijelaskan..."

@@ -291,11 +291,21 @@ export default function App() {
       case "Shift":
         return (
           <ShiftView
+            key={`shift-${shiftState.status}-${shiftState.openedAt}`}
             shiftState={shiftState}
             shiftHistory={shiftHistory}
-            cashSalesTotal={transactions
-              .filter((transaction) => transaction.paymentMethod === "Cash" && transaction.isCompleted)
-              .reduce((sum, transaction) => sum + transaction.total, 0)}
+            cashSalesTotal={
+              shiftState.openedAt
+                ? transactions
+                    .filter(
+                      (transaction) =>
+                        transaction.paymentMethod === "Cash" &&
+                        transaction.isCompleted &&
+                        new Date(transaction.date) >= new Date(shiftState.openedAt!)
+                    )
+                    .reduce((sum, transaction) => sum + transaction.total, 0)
+                : 0
+            }
             formatCurrency={formatCurrency}
             onOpenShift={handleOpenShift}
             onCloseShift={(actualCash, movements) => handleCloseShift(actualCash, movements)}
